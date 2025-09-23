@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Благодарственные письма | Homa</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/poste.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="Frontend & Backend разработка: сайты, оптимизация, креативный подход. Портфолио и проекты.">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+</head>
+<body>
+  <!-- === HERO === -->
+  <section class="hero hero-letters">
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html">Homa</a>
+        </div>
+        <ul class="nav-links" id="mainNav" role="navigation">
+          <li><a href="/my-project.html">Мои проекты</a></li>
+          <li><a href="/poste.html" class="active">Благодарственные письма</a></li>
+          <li><a href="/who.html">Кто я</a></li>
+        </ul>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <div class="hero-content container">
+      <h1 class="hero-title">Благодарственные письма</h1>
+      <p class="hero-subtitle">Мои достижения и признание партнёров</p>
+    </div>
+  </section>
+
+  <!-- === LETTERS === -->
+  <section class="letters">
+    <div class="container">
+      <h2 class="title">Мои благодарственные письма</h2>
+      <div class="letters-grid">
+
+        <div class="letter-card">
+  <img src="./img/letter1.png" alt="Письмо 1" loading="lazy">
+  <h3>Астрахань Цифровая</h3>
+  <p>За участие в проекте по созданию/разработке сайта.</p>
+  <button class="btn btn-outline" onclick="openLetterImg('./img/letter1.png')">Посмотреть</button>
+</div>
+
+
+
+        <div class="letter-card">
+          <img src="./img/letter1.png" alt="Письмо 1" loading="lazy">
+          <h3>Астрахань Цифровая</h3>
+          <p>За участие в проекте по cозданию/разработке сайта.</p>
+          <button class="btn btn-outline" onclick="openLetterImg('./img/letter1.png')">Посмотреть</button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer class="footer">
+  <div class="footer-content">
+     <p>Сделано с ❤️ и ☕</p>
+     
+    <div class="socials">
+      <a href="https://github.com/Homkaw" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/ia_hochy_obnimashek" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      
+    </div>
+   
+    <p style="margin-top: 15px;">© 2025 Хома</p>
+  </div>
+</footer>
+<div class="modal" id="letterModal">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeLetter()">&times;</button>
+    <img id="letterImage" src="" alt="Письмо" class="letter-preview">
+  </div>
+</div>
+  <script src="./js/header.js"></script>
+  <script src="./js/poste.js"></script>
+</body>
+</html>

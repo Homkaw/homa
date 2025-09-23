@@ -1,0 +1,146 @@
+/* Общий hero */
+
+/* HERO секция */
+.hero {
+    
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url("../img/hero-bg.png") no-repeat center/cover;
+}
+
+
+@keyframes moveGrid {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-40px, -40px); }
+}
+
+/* Контент */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: 15%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-subtitle {
+    font-size: clamp(18px, 2vw, 22px);
+    color: #d1d5db;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards 0.3s;
+}
+
+/* Кнопки */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+
+/* === СТРАНИЦА ПРОЕКТОВ === */
+.full-portfolio {
+  padding: 100px 20px;
+  background: linear-gradient(180deg, #0f161d 0%, #0a0f14 100%);
+  color: #fff;
+}
+
+
+
+/* Сетка карточек */
+.full-portfolio .portfolio-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+/* Карточка */
+.full-portfolio .portfolio-card {
+  background: #161b22;
+  border-radius: 14px;
+  padding-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.full-portfolio .portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.45);
+}
+
+/* Картинка */
+.full-portfolio .portfolio-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #0f161d;
+}
+
+/* Заголовок */
+.full-portfolio .portfolio-card h3 {
+  font-size: 1.3rem;
+  margin: 18px 16px 10px;
+  color: #fff;
+}
+
+/* Текст */
+.full-portfolio .portfolio-card p {
+  flex-grow: 1;
+  margin: 0 16px 18px;
+  color: #bbb;
+  font-size: 1rem;
+}
+
+/* Кнопка */
+.full-portfolio .portfolio-card .btn {
+  margin: 0 16px;
+  align-self: flex-start;
+}
+
+/* ====== АДАПТИВ ====== */
+@media (max-width: 768px) {
+  .full-portfolio {
+    padding: 60px 16px;
+  }
+
+  .full-portfolio .title {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  .full-portfolio .portfolio-cards {
+    gap: 20px;
+  }
+
+  .full-portfolio .portfolio-card img {
+    height: 180px;
+  }
+}

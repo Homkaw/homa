@@ -1,0 +1,405 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td {
+  margin: 0; padding: 0; border: 0; font-size: 100%;
+  font: inherit; vertical-align: baseline;
+  text-decoration: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section { display: block; }
+body { line-height: 1; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: ''; content: none; }
+table { border-collapse: collapse; border-spacing: 0; }
+
+
+img{
+  user-select: none
+}
+
+
+
+
+
+
+
+.footer {
+  background: linear-gradient(180deg, #0f161d 0%, #0a0f14 100%);
+  padding: 10px ;
+  text-align: center;
+  position: relative;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer p {
+  margin: 10px 0;
+  color: #bbb;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-nav a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 15px;
+  transition: color 0.3s, text-shadow 0.3s;
+  position: relative;
+}
+
+.footer-nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #30d6c7;
+  transition: width 0.3s ease;
+  margin-top: 4px;
+}
+
+.footer-nav a:hover {
+  color: #30d6c7;
+  text-shadow: 0 0 5px #30d6c7;
+}
+
+.footer-nav a:hover::after {
+  width: 100%;
+}
+
+.socials {
+  margin-top: 15px;
+}
+
+.socials a {
+  margin: 0 12px;
+  font-size: 20px;
+  color: #aaa;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+.socials a:hover {
+  color: #30d6c7;
+  transform: scale(1.2);
+  text-shadow: 0 0 8px #30d6c7;
+}
+
+
+body {
+    background-color: #001215;
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+/* Контейнер */
+.container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+}
+
+/* Заголовки */
+.title {
+    font-size: clamp(28px, 5vw, 60px);
+    text-align: center;
+    margin: 70px 0;
+    font-weight: 700;
+}
+
+
+/* ====== Хедер ====== */
+.header {
+  padding: 20px 10px 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  z-index: 1000;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ====== Лого ====== */
+.logo a {
+  font-size: 32px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.logo a:hover {
+  color: #2ec4b6;
+}
+
+/* ====== Десктоп ====== */
+.nav-links {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* ====== Гамбургер ====== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  border-radius: 2px;
+  transition: 0.3s ease;
+}
+
+/* Анимация крестика */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+
+
+
+/* ====== Мобильное меню в виде дропдауна ====== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #fff;
+    border-radius: 2px;
+    transition: 0.3s ease;
+  }
+
+  /* Анимация крестика */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  /* Дропдаун */
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    background: #151f28;
+    border-radius: 12px;
+    padding: 15px 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: none; /* по умолчанию скрыто */
+    min-width: 200px;
+  }
+
+  .nav-links.active {
+    display: flex; /* показываем при клике */
+  }
+}
+
+/* ====== Десктоп ====== */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none;
+  }
+  .nav-links {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    gap: 25px;
+    padding: 0;
+  }
+}
+
+
+.btn {
+    padding: 14px 28px;
+    font-size: 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #2ec4b6;
+    color: #001215;
+    box-shadow: 0 6px 16px rgba(46,196,182,0.3);
+}
+
+.btn-primary:hover {
+    background-color: #30d6c7;
+    transform: translateY(-3px);
+}
+
+.btn-outline {
+    border: 2px solid #2ec4b6;
+    color: #2ec4b6;
+    background-color: #00121500;
+}
+
+.btn-outline:hover {
+    background-color: #2ec4b6;
+    color: #001215;
+    transform: translateY(-3px);
+}
+
+/* Анимация появления */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* === МОДАЛКА === */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  display: none; /* по умолчанию скрыта */
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal.active {
+  display: flex;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+  background: #161b22;
+  border-radius: 12px;
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  position: relative;
+  text-align: center;
+  animation: slideUp 0.3s ease;
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #30d6c7;
+}
+
+.modal-desc {
+  font-size: 1rem;
+  color: #bbb;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.modal-close:hover {
+  color: #30d6c7;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes slideUp {
+  from {transform: translateY(30px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+

@@ -1,0 +1,253 @@
+/* HERO секция */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+}
+
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:  url("../img/hero-bg.png") no-repeat center/cover;
+  background-color: #0a0f14d7;
+}
+
+
+@keyframes moveGrid {
+  from { transform: translate(0, 0); }
+  to { transform: translate(-40px, -40px); }
+}
+
+/* Контент */
+.hero-content {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    margin-bottom: 15%;
+    max-width: 700px;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-top: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-subtitle {
+    font-size: clamp(18px, 2vw, 22px);
+    color: #d1d5db;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s ease forwards 0.3s;
+}
+
+
+/* HERO для страницы Кто я */
+
+.about {
+  padding: 80px 20px;
+  background: linear-gradient(180deg, #0f161d 0%, #0a0f14 100%);
+  color: #fff;
+}
+
+.about-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+
+
+.about-text .title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #2ec4b6;
+  margin-top: 8px;
+  border-radius: 2px;
+}
+
+.about-text p {
+  margin-bottom: 36px;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.about-text a {
+  margin-top: 60px;
+  line-height: 1.6;
+}
+
+.about-photo {
+  display: flex;
+  justify-content: center;
+}
+
+.photo-frame {
+  border: 3px solid #2ec4b6;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+  max-width: 350px;
+}
+
+.photo-frame img {
+  width: 100%;
+  display: block;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-text .title::after {
+    margin: 8px auto 0;
+  }
+
+  .about-photo {
+    margin-top: 20px;
+  }
+}
+
+
+/* EXPERIENCE */
+.experience {
+  background: linear-gradient(180deg,  #0a0f14 0%, #0f161d 100%);
+  padding: 60px 20px;
+}
+
+.experience .title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.exp-card {
+  background: linear-gradient(180deg, #14191f 0%, #161b22 100%);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(2,6,10,0.6);
+  transition: transform .34s cubic-bezier(.2,.9,.2,1), box-shadow .34s;
+  color: #bfc8cc;
+  line-height: 1.55;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.exp-card h3 {
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+  color: #2ec4b6;
+}
+
+.exp-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.exp-card ul li {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+}
+
+.exp-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity .5s ease, transform .5s cubic-bezier(.2,.9,.2,1);
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(46,196,182,0.08);
+}
+
+/* адаптив */
+@media (max-width: 768px) {
+  .experience { padding: 40px 16px; }
+  .exp-card { padding: 18px; }
+  .exp-card h3 { font-size: 1.1rem; }
+}
+
+
+.exp-icons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.exp-icon {
+  background: #14191f;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #bfc8cc;
+}
+
+.exp-icon span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.exp-icon:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(46,196,182,0.3);
+}
+
+
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #14191f;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 400px;
+  color: #fff;
+  text-align: center;
+}
+
+.modal .close {
+  position: absolute;
+  top: 12px; right: 16px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}

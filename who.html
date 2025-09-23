@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кто я — Хома</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/who.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="Frontend & Backend разработка: сайты, оптимизация, креативный подход. Портфолио и проекты.">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+</head>
+<body>
+  <!-- === HERO + HEADER === -->
+  <section class="hero">
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <a href="./index.html">Homa</a>
+        </div>
+        <ul class="nav-links" id="mainNav" role="navigation">
+          <li><a href="/my-project.html">Мои проекты</a></li>
+          <li><a href="/poste.html" class="active">Благодарственные письма</a></li>
+          <li><a href="/who.html">Кто я</a></li>
+        </ul>
+        <button class="hamburger" id="hamburgerBtn" aria-label="Меню">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </header>
+
+    <div class="hero-content container">
+      <h1 class="hero-title">Привет, я Хома 👋</h1>
+      <p class="hero-subtitle">Frontend & Backend разработчик, создаю сайты, которые работают на вас</p>
+      <div class="hero-buttons">
+        <a href="/my-project.html" class="btn btn-primary">Посмотреть проекты</a>
+        <a href="#skills" class="btn btn-outline">Что я умею</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- === ABOUT CONTENT === -->
+  <section class="about">
+    <div class="container">
+  <div class="about-wrapper">
+    <div class="about-text">
+      <h2 class="title">Кто я?</h2>
+      <p>
+        Я занимаюсь веб-разработкой и люблю создавать проекты с нуля. 
+        Для меня важно, чтобы сайт не только выглядел красиво, но и был быстрым, удобным и полезным.
+      </p>
+      <p>
+        В моём портфолио — адаптивные сайты для компаний, учебные проекты, 
+        а также проекты для волонтёрских организаций.
+      </p>
+      <a href="/my-project.html" class="btn btn-primary">Посмотреть проекты</a>
+    </div>
+    <div class="about-photo">
+      <div class="photo-frame">
+        <img src="./img/me.jpg" alt="Фото Хомы">
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<!-- === EXPERIENCE === -->
+
+<section class="experience" id="experience">
+  <div class="container">
+    <h2 class="title">Опыт и проекты</h2>
+
+    <div class="experience-grid">
+
+      <!-- Учебные проекты -->
+      <article class="exp-card">
+        <h3>Учебные проекты</h3>
+        <div class="exp-icons-grid">
+          <div class="exp-icon" data-title="Python/Kivy" data-desc="Приложение для обучения финансовой грамотности: уроки, тесты, игры, личный кабинет, отчёты на email, светлая/тёмная темы.">
+            📱<span>Python/Kivy</span>
+          </div>
+          <div class="exp-icon" data-title="Telegram-бот" data-desc="Бронирование студии с подтверждением оплаты через админа.">
+            🤖<span>Telegram-бот</span>
+          </div>
+          <div class="exp-icon" data-title="Django" data-desc="Регистрация, авторизация, админ-панель для учебного проекта.">
+            ⚙️<span>Django</span>
+          </div>
+          <div class="exp-icon" data-title="Kotlin" data-desc="Desktop-приложения в колледже.">
+            🤝<span>Kotlin</span>
+          </div>
+          <div class="exp-icon" data-title="Робот" data-desc="Интерфейс для взаимодействия с роботом на Python.">
+            🧩<span>Робот</span>
+          </div>
+          <div class="exp-icon" data-title="React" data-desc="Учебный SPA-проект на React.">
+            ⚛️<span>React</span>
+          </div>
+          <div class="exp-icon" data-title="SEO" data-desc="Анализ поисковых запросов для учебного проекта.">
+            🔎<span>SEO</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Коммерческие проекты -->
+      <article class="exp-card">
+        <h3>Коммерческие проекты</h3>
+        <div class="exp-icons-grid">
+          <div class="exp-icon" data-title="Figma" data-desc="Макеты в Figma и верстка готовых сайтов.">
+            🎨<span>Figma</span>
+          </div>
+          <div class="exp-icon" data-title="Сайты" data-desc="Сайты на Тильде и ручная адаптивная верстка.">
+            🌐<span>Сайты</span>
+          </div>
+          <div class="exp-icon" data-title="Email" data-desc="Реализация отправки сообщений с сайта на почту.">
+            📧<span>Email</span>
+          </div>
+          <div class="exp-icon" data-title="Reg.ru" data-desc="Размещение и подключение сайтов на Reg.ru.">
+            🚀<span>Reg.ru</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Самообразование -->
+      <article class="exp-card">
+        <h3>Самообразование</h3>
+        <div class="exp-icons-grid">
+          <div class="exp-icon" data-title="Верстка" data-desc="Верстка сайтов по видео с YouTube.">
+            📚<span>Верстка</span>
+          </div>
+          <div class="exp-icon" data-title="Telegram" data-desc="Telegram-боты (aiogram, webhooks, интеграции).">
+            🤖<span>Telegram</span>
+          </div>
+          <div class="exp-icon" data-title="Игры" data-desc="Мини-игры на Python, например 'угадай слово из 5 букв'.">
+            🎮<span>Игры</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+  <!-- === FOOTER === -->
+   <footer class="footer">
+  <div class="footer-content">
+     <p>Сделано с ❤️ и ☕</p>
+     
+    <div class="socials">
+      <a href="https://github.com/Homkaw" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/ia_hochy_obnimashek" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      
+    </div>
+   
+    <p style="margin-top: 15px;">© 2025 Хома</p>
+  </div>
+</footer>
+<!-- Модалка -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h3 id="modal-title"></h3>
+    <p id="modal-desc"></p>
+  </div>
+</div>
+  <script src="./js/header.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target); // анимация один раз
+        }
+      });
+    }, { threshold: 0.2 }); // появление при 20% видимости
+
+    // навесим на все карточки
+    // появление карточек опыта
+document.querySelectorAll(".exp-card").forEach(card => {
+  observer.observe(card);
+});
+
+    });
+ 
+</script>
+
+<script>
+  const modal = document.getElementById('modal');
+const modalTitle = document.getElementById('modal-title');
+const modalDesc = document.getElementById('modal-desc');
+const closeBtn = document.querySelector('.modal .close');
+
+document.querySelectorAll('.exp-icon').forEach(icon => {
+  icon.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalTitle.textContent = icon.dataset.title;
+    modalDesc.textContent = icon.dataset.desc;
+  });
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', e => {
+  if(e.target === modal) modal.style.display = 'none';
+});
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои проекты — Хома</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/my-proj.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta name="description" content="Frontend & Backend разработка: сайты, оптимизация, креативный подход. Портфолио и проекты.">
+    <link rel="icon" type="image/png" href="./img/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./img/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./img/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="./img/favicon/site.webmanifest" />
+</head>
+<body>
+    <main>
+  <!-- ====== Хедер ====== -->
+   <section class="hero hero-projects">
+  <header class="header">
+    <nav class="navbar">
+      <div class="logo">
+        <a href="./index.html">Homa</a>
+      </div>
+      <ul class="nav-links" id="mainNav" role="navigation">
+        <li><a href="/my-project.html" class="active">Мои проекты</a></li>
+        <li><a href="/poste.html">Благодарственные письма</a></li>
+        <li><a href="/who.html">Кто я</a></li>
+      </ul>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Меню">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="hero-content container">
+    <h1 class="hero-title">Мои проекты</h1>
+    <p class="hero-subtitle">
+      Здесь собраны лучшие работы: от учебных проектов до реальных заказов.
+    </p>
+    <div class="hero-buttons">
+      <a href="#portfolio" class="btn btn-primary">Смотреть проекты</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- === ПОРТФОЛИО (полная версия) === -->
+  <section class="portfolio full-portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="title">Все проекты</h2>
+      <div class="portfolio-cards">
+
+        <div class="portfolio-card">
+          <img src="./img/portfolio1.jpg" alt="Проект 1">
+          <h3>Сайт для ремонта квартир</h3>
+          <p>Адаптивная вёрстка и оптимизация.</p>
+          <a href="#" class="btn btn-outline">Подробнее</a>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="./img/portfolio2.jpg" alt="Проект 2">
+          <h3>Сайт для Астрахань Цифровой</h3>
+          <p>Верстка и интеграция для цифровых волонтёров.</p>
+          <a href="#" class="btn btn-outline">Подробнее</a>
+        </div>
+
+        <div class="portfolio-card">
+          <img src="./img/portfolio3.jpg" alt="Проект 3">
+          <h3>Интернет-магазин печенек</h3>
+          <p>Учебный проект с классным дизайном.</p>
+          <a href="#" class="btn btn-outline">Подробнее</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== Футер ====== -->
+  <footer class="footer">
+  <div class="footer-content">
+     <p>Сделано с ❤️ и ☕</p>
+     
+    <div class="socials">
+      <a href="https://github.com/Homkaw" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://t.me/ia_hochy_obnimashek" aria-label="Telegram"><i class="fab fa-telegram"></i></a>
+      
+    </div>
+   
+    <p style="margin-top: 15px;">© 2025 Хома</p>
+  </div>
+</footer>
+</main>
+
+<!-- === МОДАЛКА ДЛЯ ПРОЕКТА === -->
+<div class="modal" id="projectModal">
+  <div class="modal-content">
+    <button class="modal-close" id="modalClose">&times;</button>
+    <img src="./img/portfolio1.jpg" alt="Превью проекта" class="modal-img">
+    <h3 class="modal-title">Название проекта</h3>
+    <p class="modal-desc">Здесь будет подробное описание проекта, используемые технологии, задача и результат.</p>
+    <a href="#" target="_blank" class="btn btn-primary">Открыть сайт</a>
+  </div>
+</div>
+  <script src="./js/modal.js"></script>
+  <script src="./js/header.js"></script>
+</body>
+</html>
