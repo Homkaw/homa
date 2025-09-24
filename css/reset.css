@@ -31,7 +31,11 @@ body, section, div{
   box-sizing: border-box;
 }
 
-
+/* Кнопки */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
 
 
 .footer {
@@ -404,6 +408,7 @@ body {
   from {transform: translateY(30px); opacity: 0;}
   to {transform: translateY(0); opacity: 1;}
 }
+
 
 
 
