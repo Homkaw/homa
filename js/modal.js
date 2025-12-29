@@ -32,7 +32,7 @@ const projects = [
     title: "Сайт по заказу реплик картин",
     img: "./img/portfolio4.jpg",
     desc: "Проект был создан в свободное время для тренировки",
-    link: "https://homkaw.github.io/cookie/"
+    link: "https://homkaw.github.io/Ink.-House/"
   },
   {
     title: "Сайт на 23 февраля",
@@ -84,3 +84,4 @@ modal.addEventListener("click", (e) => {
     modal.classList.remove("active");
   }
 });
+
